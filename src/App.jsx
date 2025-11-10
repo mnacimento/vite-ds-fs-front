@@ -14,6 +14,8 @@ import ImageUploader from './imageUploader/ImageUploader';
 import ListaDeTareas from './axiosComponent/ListaDeTareas';
 import { Toaster } from 'react-hot-toast';
 import ListaDeTareasModal from './modal/ListaDeTareasModal';
+import Contenido from './componentes/Contenido';
+import Header from './componentes/Header';
 
 const App = () => {
   return (
@@ -21,14 +23,17 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Menu/>}>
-            {/* <Route path='/' element={<Login/>}/> */}
-            <Route path='/' element={<ImageUploader/>}/>
+            <Route path='/' element={<Login/>}/>
+            <Route path='/imageUploader' element={<ImageUploader/>}/>
             <Route path='/clima' element={<Clima/>}/>
             <Route path='/persona' element={<FormularioPersona/>}/>
             <Route path='/ejemplo' element={<ComponenteEjemplo/>}/>
             <Route path='/traduccion' element={<FormularioPersonaTranslation/>}/>
             <Route path='/tareas' element={<ListaDeTareas/>}/>
             <Route path='/tareasModal' element={<ListaDeTareasModal/>}/>
+            <Route path='/lista' element={<Header/>}>
+              <Route path='/lista' element={<Contenido/>}/>
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

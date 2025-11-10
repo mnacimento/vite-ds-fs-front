@@ -10,7 +10,7 @@ const Menu = () => {
         <Outlet/> */}
             <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" to="/dashboard">Menu</NavLink>
+                    <NavLink className="navbar-brand" to="/">Menu</NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -21,7 +21,6 @@ const Menu = () => {
                     </div>
                 </div>
             </nav>
-            <br /><br /><br />
             <Outlet />
         </div>
     )
